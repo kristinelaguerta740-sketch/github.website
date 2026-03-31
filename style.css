@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(192, 221, 255);   /* Background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    width: 600px;
+    margin: 100px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px gray;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;   /* Vertical alignment */
+}
+
+/* Labels */
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Inputs */
+input, select, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Gender section */
+.gender {
+    display: flex;
+    flex-direction: column;   /* Vertical radio buttons */
+    margin-top: 5px;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #00b3ff;   /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+    background: #0055ff;
+}
+
+/* Output section */
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e6f0ff;
+    border-radius: 8px;
+}

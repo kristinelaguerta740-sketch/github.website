@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Student Details Form</h2>
+
+    <form onsubmit="showData(event)">
+        
+        <label>Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+
+        <label>Gender:</label>
+        <div>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <label>Course:</label>
+        <select id="course">
+            <option>Select Course</option>
+            <option>BSIS</option>
+            <option>BSA</option>
+            <option>BSCRIM</option>
+            <option>BSPSYCH</option>
+            <option>BSTM</option>
+            <option>BCED</option>
+
+        </select>
+
+        <label>Address:</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Output Section -->
+    <div id="output"></div>
+</div>
+
+<!-- JavaScript -->
+<script>
+function showData(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let course = document.getElementById("course").value;
+    let address = document.getElementById("address").value;
+
+    let gender = document.querySelector('input[name="gender"]:checked');
+    gender = gender ? gender.value : "Not selected";
+
+    document.getElementById("output").innerHTML = `
+        <h3>Submitted Details:</h3>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Gender:</b> ${gender}</p>
+        <p><b>Course:</b> ${course}</p>
+        <p><b>Address:</b> ${address}</p>
+    `;
+}
+</script>
+
+</body>
+</html>
